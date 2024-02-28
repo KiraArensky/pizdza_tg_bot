@@ -1,0 +1,27 @@
+
+
+Wed Feb 28 11:49:58 2024
+<<ERROR polling>>
+Traceback (most recent call last):
+  File "C:\Users\dekof\project\pizdza_tg_bot\main_bot.py", line 103, in telegram_polling
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 1104, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 1179, in __threaded_polling
+    raise e
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 1141, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\util.py", line 149, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\util.py", line 92, in run
+    task(*args, **kwargs)
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 7868, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dekof\project\pizdza_tg_bot\main_bot.py", line 54, in message_text
+    /test - тест на пидора\n\
+  File "C:\Users\dekof\project\pizdza_tg_bot\script\msg.py", line 134, in msg_func
+    img = open(os.path.join(dir, random.choice(os.listdir(dir))), "rb")
+                                               ^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 3] Системе не удается найти указанный путь: '../database/pic/photos'
+
+<<ERROR polling>>
