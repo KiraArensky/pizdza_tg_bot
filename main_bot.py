@@ -25,6 +25,51 @@ bot = telebot.TeleBot(token_bot)
 print(cowsay.get_output_string('ghostbusters', "Работай сучка"))
 
 
+@bot.message_handler(commands=['start'])  # Запуск бота
+def start(message):
+    con = sqlite3.connect("db/chats.db")  # Подключение к базе данных
+    cur = con.cursor()  # Создание курсора
+
+    result = cur.execute("""SELECT id FROM id""").fetchall()  # Получение всех айди из базы данных
+    id_list = [elem[0] for elem in result]
+
+    if message.chat.id not in id_list:  # Если айди нет в базе данных, то добавляем его
+        cur.execute(
+            f'''INSERT INTO id (id) VALUES({message.chat.id}) ''')
+        con.commit()
+    con.close()  # Закрытие базы данных
+
+    bot.send_message(message.chat.id, 'Добрый день, это чат-бот Пицц(зд)а!\n\
+       \n\
+       Он создан ради вашего удовольствия, ну и обосрать вас, как в чате, так и раз на раз\n\
+       \n\
+       Основной его функционал: хамить вам и раздражать вас и ваших друзей\n\
+       \n\
+       Но помимо этого, у него есть команды:\n\
+       /cum - инфа о боте\n\
+       /poh0 - специальный режим похуй\n\
+       /poh1 - отключение режима похуй\n\
+       /pic - рандомная пикча\n\
+       /pic_add - предложить пикчу в добавление рандомной пикчи\n\
+       /test - тест на пидора\n\
+       /lohh - обижает обидчика после каждого сообщения (ВАЖНО! команду нужно использовать ответив на сообщение обидчика)\n\
+       /nelohh - прекратить обижать (отмена /lohh)\n\
+                            \n\
+       #Функционал_будет_пополнятся\n\
+       \n\
+           \n\
+       Приятное дополнение: бот может мутить участников беседы (но не админов)!\n\
+           \n\
+       Для этого ответьте на сообщение обидчика так: "тише! {срок в минутах}"\n\
+           \n\
+       \n\
+       Все ваши предложения можете писать мне: @kshi_rar\n\
+       \n\
+       Также у меня есть канал: https://t.me/trudhochetsya\n\
+       \n\
+       Маме привет!')
+
+
 @bot.message_handler(content_types=['text'])
 def message_text(message):
     con = sqlite3.connect("database/chat.db")
@@ -39,9 +84,9 @@ def message_text(message):
         con.commit()
         key = "default"
 
-    bot.send_message(5184714205, f'[Челик](tg://user?id={message.from_user.id}) печатает...'
-                                 f'\nЕго id: {message.from_user.id}'
-                                 f'\nЧат id: {message.chat.id}', disable_web_page_preview=True,
+    bot.send_message(466348470, f'[Челик](tg://user?id={message.from_user.id}) печатает...'
+                                f'\nЕго id: {message.from_user.id}'
+                                f'\nЧат id: {message.chat.id}', disable_web_page_preview=True,
                      parse_mode="Markdown")
 
     if key == "default":
