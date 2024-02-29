@@ -27,7 +27,7 @@ def msg_func(s, message, bot, cur, con):
         try:
             if message.from_user.id not in lohhh.keys():
                 if message.reply_to_message.from_user.id == 466348470:
-                    [message.from_user.id] = message.reply_to_message.from_user.id
+                    lohhh[message.from_user.id] = message.reply_to_message.from_user.id
                     new_data = {f'{message.from_user.id}': message.reply_to_message.from_user.id}
                     with open('database/json/user_loh.json', encoding='utf8') as f:
                         data = json.load(f)
@@ -97,8 +97,6 @@ def msg_func(s, message, bot, cur, con):
     /pic - рандомная пикча\n\
     /pic_add - предложить пикчу в добавление рандомной пикчи\n\
     /test - тест на пидора\n\
-    /lohh - обижает обидчика после каждого сообщения (ВАЖНО! команду нужно использовать ответив на сообщение обидчика)\n\
-    /nelohh - прекратить обижать (отмена /lohh)\n\
                          \n\
     #Функционал_будет_пополнятся\n\
     \n\
@@ -108,11 +106,13 @@ def msg_func(s, message, bot, cur, con):
     Для этого ответьте на сообщение обидчика так: "тише! {срок в минутах}"\n\
         \n\
     \n\
-    Все ваши предложения можете писать мне: @kshi_rar\n\
+    Все ваши предложения можете писать мне: @pizdza_mnyam\n\
     \n\
     Также у меня есть канал: https://t.me/trudhochetsya\n\
     \n\
     Маме привет!')
+        #     /lohh - обижает обидчика после каждого сообщения (ВАЖНО! команду нужно использовать ответив на сообщение обидчика)\n\
+        #     /nelohh - прекратить обижать (отмена /lohh)\n\
     elif "да" in s or "д" in s:
         bot.send_message(message.chat.id, "Пизда")
     elif message.text == '/poh0' or "/poh0@pizdza_bot" == message.text:
@@ -142,4 +142,3 @@ def msg_func(s, message, bot, cur, con):
         con.commit()
         bot.send_message(message.chat.id, "Тест на пидора")
         bot.send_message(message.chat.id, "Как вас зовут?")
-

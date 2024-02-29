@@ -84,10 +84,10 @@ def message_text(message):
         con.commit()
         key = "default"
 
-    bot.send_message(466348470, f'[Челик](tg://user?id={message.from_user.id}) печатает...'
-                                f'\nЕго id: {message.from_user.id}'
-                                f'\nЧат id: {message.chat.id}', disable_web_page_preview=True,
-                     parse_mode="Markdown")
+    # bot.send_message(466348470, f'[Челик](tg://user?id={message.from_user.id}) печатает...'
+    #                             f'\nЕго id: {message.from_user.id}'
+    #                             f'\nЧат id: {message.chat.id}', disable_web_page_preview=True,
+    #                  parse_mode="Markdown")
 
     if key == "default":
         if "тише!" in message.text or "Тише!" in message.text:

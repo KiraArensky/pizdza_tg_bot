@@ -24,4 +24,261 @@ Traceback (most recent call last):
                                                ^^^^^^^^^^^^^^^
 FileNotFoundError: [WinError 3] Системе не удается найти указанный путь: '../database/pic/photos'
 
+<<ERROR polling>>
+
+Thu Feb 29 09:39:59 2024
+<<ERROR polling>>
+Traceback (most recent call last):
+  File "C:\Users\dekof\project\pizdza_tg_bot\main_bot.py", line 125, in message_photo
+    k = cur.execute(f"""SELECT kluch FROM id WHERE id = {message.chat.id}""").fetchone()[0]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: kluch
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dekof\project\pizdza_tg_bot\main_bot.py", line 148, in telegram_polling
+    bot.polling()  # Опрос сервера Telegram на предмет новых сообщений
+    ^^^^^^^^^^^^^
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 1104, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 1179, in __threaded_polling
+    raise e
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 1141, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\util.py", line 149, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\util.py", line 92, in run
+    task(*args, **kwargs)
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 7868, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dekof\project\pizdza_tg_bot\main_bot.py", line 127, in message_photo
+    cur.execute(
+sqlite3.OperationalError: table id has no column named kluch
+
+<<ERROR polling>>
+
+Thu Feb 29 09:40:09 2024
+<<ERROR polling>>
+Traceback (most recent call last):
+  File "C:\Users\dekof\project\pizdza_tg_bot\main_bot.py", line 125, in message_photo
+    k = cur.execute(f"""SELECT kluch FROM id WHERE id = {message.chat.id}""").fetchone()[0]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: kluch
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dekof\project\pizdza_tg_bot\main_bot.py", line 148, in telegram_polling
+    bot.polling()  # Опрос сервера Telegram на предмет новых сообщений
+    ^^^^^^^^^^^^^
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 1104, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 1179, in __threaded_polling
+    raise e
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 1141, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\util.py", line 149, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\util.py", line 92, in run
+    task(*args, **kwargs)
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 7868, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dekof\project\pizdza_tg_bot\main_bot.py", line 127, in message_photo
+    cur.execute(
+sqlite3.OperationalError: table id has no column named kluch
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dekof\project\pizdza_tg_bot\main_bot.py", line 148, in telegram_polling
+    bot.polling()  # Опрос сервера Telegram на предмет новых сообщений
+    ^^^^^^^^^^^^^
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 1104, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 1179, in __threaded_polling
+    raise e
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 1141, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\util.py", line 149, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\util.py", line 92, in run
+    task(*args, **kwargs)
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 7868, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dekof\project\pizdza_tg_bot\main_bot.py", line 127, in message_photo
+    cur.execute(
+sqlite3.OperationalError: table id has no column named kluch
+
+<<ERROR polling>>
+
+Thu Feb 29 09:40:21 2024
+<<ERROR polling>>
+Traceback (most recent call last):
+  File "C:\Users\dekof\project\pizdza_tg_bot\main_bot.py", line 125, in message_photo
+    k = cur.execute(f"""SELECT kluch FROM id WHERE id = {message.chat.id}""").fetchone()[0]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: kluch
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dekof\project\pizdza_tg_bot\main_bot.py", line 148, in telegram_polling
+    bot.polling()  # Опрос сервера Telegram на предмет новых сообщений
+    ^^^^^^^^^^^^^
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 1104, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 1179, in __threaded_polling
+    raise e
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 1141, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\util.py", line 149, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\util.py", line 92, in run
+    task(*args, **kwargs)
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 7868, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dekof\project\pizdza_tg_bot\main_bot.py", line 127, in message_photo
+    cur.execute(
+sqlite3.OperationalError: table id has no column named kluch
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dekof\project\pizdza_tg_bot\main_bot.py", line 148, in telegram_polling
+    bot.polling()  # Опрос сервера Telegram на предмет новых сообщений
+    ^^^^^^^^^^^^^
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 1104, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 1179, in __threaded_polling
+    raise e
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 1141, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\util.py", line 149, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\util.py", line 92, in run
+    task(*args, **kwargs)
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 7868, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dekof\project\pizdza_tg_bot\main_bot.py", line 127, in message_photo
+    cur.execute(
+sqlite3.OperationalError: table id has no column named kluch
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dekof\project\pizdza_tg_bot\main_bot.py", line 148, in telegram_polling
+    bot.polling()  # Опрос сервера Telegram на предмет новых сообщений
+    ^^^^^^^^^^^^^
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 1104, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 1179, in __threaded_polling
+    raise e
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 1141, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\util.py", line 149, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\util.py", line 92, in run
+    task(*args, **kwargs)
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 7868, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dekof\project\pizdza_tg_bot\main_bot.py", line 127, in message_photo
+    cur.execute(
+sqlite3.OperationalError: table id has no column named kluch
+
+<<ERROR polling>>
+
+Thu Feb 29 09:42:07 2024
+<<ERROR polling>>
+Traceback (most recent call last):
+  File "C:\Users\dekof\project\pizdza_tg_bot\main_bot.py", line 125, in message_photo
+    k = cur.execute(f"""SELECT kluch FROM id WHERE id = {message.chat.id}""").fetchone()[0]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: kluch
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dekof\project\pizdza_tg_bot\main_bot.py", line 148, in telegram_polling
+    bot.polling()  # Опрос сервера Telegram на предмет новых сообщений
+    ^^^^^^^^^^^^^
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 1104, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 1179, in __threaded_polling
+    raise e
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 1141, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\util.py", line 149, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\util.py", line 92, in run
+    task(*args, **kwargs)
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 7868, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dekof\project\pizdza_tg_bot\main_bot.py", line 127, in message_photo
+    cur.execute(
+sqlite3.OperationalError: table id has no column named kluch
+
+<<ERROR polling>>
+
+Thu Feb 29 09:42:17 2024
+<<ERROR polling>>
+Traceback (most recent call last):
+  File "C:\Users\dekof\project\pizdza_tg_bot\main_bot.py", line 125, in message_photo
+    k = cur.execute(f"""SELECT kluch FROM id WHERE id = {message.chat.id}""").fetchone()[0]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: kluch
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dekof\project\pizdza_tg_bot\main_bot.py", line 148, in telegram_polling
+    bot.polling()  # Опрос сервера Telegram на предмет новых сообщений
+    ^^^^^^^^^^^^^
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 1104, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 1179, in __threaded_polling
+    raise e
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 1141, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\util.py", line 149, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\util.py", line 92, in run
+    task(*args, **kwargs)
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 7868, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dekof\project\pizdza_tg_bot\main_bot.py", line 127, in message_photo
+    cur.execute(
+sqlite3.OperationalError: table id has no column named kluch
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dekof\project\pizdza_tg_bot\main_bot.py", line 148, in telegram_polling
+    bot.polling()  # Опрос сервера Telegram на предмет новых сообщений
+    ^^^^^^^^^^^^^
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 1104, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 1179, in __threaded_polling
+    raise e
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 1141, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\util.py", line 149, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\util.py", line 92, in run
+    task(*args, **kwargs)
+  File "C:\Users\dekof\project\pythonProject\.venv\pizdza_tg_bot\Lib\site-packages\telebot\__init__.py", line 7868, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dekof\project\pizdza_tg_bot\main_bot.py", line 127, in message_photo
+    cur.execute(
+sqlite3.OperationalError: table id has no column named kluch
+
 <<ERROR polling>>
